@@ -11,4 +11,4 @@ RUN apt install -y  \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt --break-system-packages
